@@ -1,0 +1,112 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="js/v2.6.10/vue.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body bgcolor="">
+<div id="app" align="center" >
+	<h1>二、八、十六转十：</h1><br />
+    二进制转十进制:
+    <input type="text"  v-model="num1" />
+    结果：{{fun1}}<br><br>
+    八进制转十进制:
+    <input type="text"  v-model="num7"/>
+    结果：{{fun7}}<br /><br>
+    十六进制转十进制:
+    <input type="text"  v-model="num6"/>
+    结果：{{fun6}}<br /><br>
+	<h1>十、八、十六转二：</h1><br />
+    十进制转二进制:
+    <input type="text"   v-model="num2"/>
+    结果：{{fun2}}<br /><br>
+    八进制转二进制:
+    <input type="text"   v-model="num4"/>
+    结果：{{fun4}}<br /><br>
+    十六进制转二进制:
+    <input type="text"   v-model="num8"/>
+    结果：{{fun8}}<br /><br>
+	<h1>二、十、十六转八：</h1><br />
+   二进制转八进制:
+    <input type="text"   v-model="num3"/>
+    结果：{{fun3}}<br /><br>
+    十进制转八进制:
+    <input type="text"   v-model="num9"/>
+    结果：{{fun9}}<br /><br>
+
+    十六进制转八进制:
+    <input type="text"   v-model="num10"/>
+    结果：{{fun10}}<br /><br>
+	<h1>二、八、十转十六：</h1><br />
+    二进制转十六进制:
+    <input type="text"   v-model="num11"/>
+    结果：{{fun11}}<br /><br>
+    八进制转十六进制:
+    <input type="text"   v-model="num12"/>
+    结果：{{fun12}}<br /><br>
+    十进制转十六进制:
+    <input type="text"   v-model="num5"/>
+    结果：{{fun5}}<br /><br>
+
+</div>
+<script type="text/javascript">
+    let v=new Vue({
+        el:"#app",
+        data:{
+            num1:'0',
+            num2:'0',
+            num3:'0',
+            num4:'0',
+            num5:'0',
+            num6:'0',
+            num7:'0',
+            num8:'0',
+            num9:'0',
+            num10:'0',
+            num11:'0',
+            num12:'0',
+        },
+        computed: {
+            fun1: function() {
+                return parseInt(this.num1, 2);
+            },
+            fun2: function() {
+                return (parseInt(this.num2)).toString(2);
+            },
+            fun3: function() {
+                return (parseInt(this.num3, 2)).toString(8);
+            },
+            fun4: function() {
+                return (parseInt(this.num4, 8)).toString(2);
+            },
+            fun5: function() {
+                return (parseInt(this.num5)).toString(16);
+            },
+            fun6: function() {
+                return parseInt(this.num6, 16);
+            },
+            fun7:function () {
+               return parseInt(this.num7,8);
+            },
+            fun8:function () {
+                return parseInt(this.num8,16).toString(2);
+            },
+            fun9:function () {
+                return parseInt(this.num9).toString(8);
+            },
+            fun10:function () {
+                return parseInt(this.num10,16).toString(8);
+            },
+            fun11:function () {
+                return parseInt(this.num11,2).toString(16);
+            },
+            fun12:function () {
+                return parseInt(this.num12,8).toString(16);
+            },
+
+        }
+    });
+
+</script>
+</body>
+<ml>
